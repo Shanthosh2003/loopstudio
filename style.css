@@ -68,6 +68,7 @@ header {
   position: relative;
   grid-template-columns: repeat(12, 1fr);
   margin-top: 100px;
+  align-items: baseline;
 }
 .vr-img {
   grid-row: 1;
