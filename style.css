@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+:root {
+  --alata: "Alata", sans-serif;
+  --josefin_sans: "Josefin Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/desktop/image-hero.jpg);
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  padding-top: 200px;
+}
+header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.nav-logo {
+  width: 200px;
+}
+.nav-logo img {
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  color: white;
+  font-family: var(--alata);
+}
+.creation{
+    padding-bottom: 100px;
+}
+.banner-box {
+  width: 50%;
+  padding: 20px;
+  border: 2px solid white;
+}
+.banner-box h1 {
+  font-size: 50px;
+  font-family: var(--josefin_sans);
+  color: white;
+  font-weight: 300;
+}
+.vr-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 100px;
+}
+.vr-img {
+  grid-row: 1;
+  grid-column: 1 / span 7;
+  z-index: 1;
+}
+.vr-img img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.vr-content {
+  grid-row: 1;
+  grid-column: 6 / -1;
+  z-index: 2;
+  background-color: white;
+  margin-top: 150px;
+  padding: 70px;
+}
+.vr-content h2 {
+  font-size: 40px;
+  font-family: var(--josefin_sans);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.vr-content p {
+  font-size: 12px;
+  font-family: var(--alata);
+  color: gray;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+.title h2 {
+  font-size: 36px;
+  font-family: var(--josefin_sans);
+  font-weight: 300;
+}
+.title button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: transparent;
+  font-family: var(--alata);
+  font-weight: 300;
+  letter-spacing: 4px;
+  font-size: 12px;
+  border: 2px solid gray;
+}
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.img-box::after {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  z-index: 6;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: var(--josefin_sans);
+}
+
+.img-box::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.img-box:nth-child(1)::after {
+  /* content: "DEEP EARTH"; */
+  content: "DEEP \A EARTH";
+  white-space: pre;
+}
+.img-box:nth-child(2)::after {
+  content: "NIGHT \A ARCADE";
+  white-space: pre;
+}
+.img-box:nth-child(3)::after {
+  content: "SOCCER \A TEAM VR";
+  white-space: pre;
+}
+.img-box:nth-child(4)::after {
+  content: "THE \A GRID";
+  white-space: pre;
+}
+.img-box:nth-child(5)::after {
+  content: "FROM UP \A ABOVE VR";
+  white-space: pre;
+}
+.img-box:nth-child(6)::after {
+  content: "POCKET \A BOREALIS";
+  white-space: pre;
+}
+.img-box:nth-child(7)::after {
+  content: "THE \A CURIOSITY";
+  white-space: pre;
+}
+.img-box:nth-child(8)::after {
+  content: "MAKE IT \A FISHEYE";
+  white-space: pre;
+}
+.img-box img {
+  width: 100%;
+  display: block;
+}
+.img-box {
+  position: relative;
+  overflow: hidden;
+}
+footer {
+  background: black;
+  padding: 50px 0;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.social-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+.quick-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  color: white;
+  font-family: var(--alata);
+}
+.footer-icons{
+    display: flex;
+    gap: 14px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.social-links .copyrights{
+    font-size: 12px;
+    font-family: var(--alata);
+    color: gray;
+}
